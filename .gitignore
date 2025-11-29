@@ -1,0 +1,9 @@
+# Entorno virtual
+venv/
+__pycache__/
+
+# Archivos de sistema
+.DS_Store
+
+# Archivos de entorno (donde guardaremos contraseñas más adelante)
+.env
