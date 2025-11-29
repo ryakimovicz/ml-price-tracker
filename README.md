@@ -12,6 +12,19 @@ Este proyecto demuestra habilidades en **Web Scraping**, **Automatización de Ta
 * **Sistema de Notificaciones:** Envío de alertas por email usando el protocolo SMTP de Gmail con soporte para caracteres especiales (UTF-8).
 * **Seguridad:** Manejo de credenciales sensibles mediante variables de entorno (`.env`), evitando exponer contraseñas en el código fuente.
 
+## 📸 Funcionamiento
+
+### 1. Detección de Precio (Terminal)
+El script analiza el HTML de MercadoLibre, limpia el precio y detecta la oportunidad.
+
+*(Primera prueba con `TARGET_PRICE = 1200000` y la segunda con `TARGET_PRICE = 1700000`)*
+
+![Ejecución en Consola](img/console_output.png)
+
+### 2. Notificación Automática (Email)
+Si el precio es menor al objetivo, recibes una alerta inmediata con el link de compra.
+![Alerta de Email](img/email_alert.png)
+
 ## 🛠️ Tecnologías Utilizadas
 
 * **Lenguaje:** Python 3.10+
