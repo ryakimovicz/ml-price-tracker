@@ -17,6 +17,16 @@ def check_price():
             title = soup.find('h1', class_='ui-pdp-title').get_text()
             
             print(f"Producto: {title.strip()}")
+            price_container = soup.find('div', class_='ui-pdp-price__second-line')
+            
+            if price_container:
+                price_text = price_container.find('span', class_='andes-money-amount__fraction').get_text()
+                
+                price = float(price_text.replace('.', '').replace(',', '.'))
+                
+                print(f"Precio: ${price:,.2f}")
+            else:
+                print("Error: No se encontró el contenedor del precio")
         else:
             print(f"Error: Status code {page.status_code}")
             
